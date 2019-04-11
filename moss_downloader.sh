@@ -90,15 +90,15 @@ while true; do
 done
 
 file="moss_downloaded_results.html"
-# wget "$quiet"-np -e robots=off "$url" -O "$file"
+wget "$quiet"-np -e robots=off "$url" -O "$file"
 
-# ./remove_extra_results.py "$file" "$number"
-# wget "$quiet" -k -F -r -p -np -e robots=off -i "$file"
-
+./remove_extra_results.py "$file" "$number"
+wget "$quiet" -k -F -r -p -np -e robots=off -i "$file"
 mkdir  -p "$output_dir"
 mv moss.stanford.edu "$output_dir"
 sed -i -e 's/https:\/\///g' $file
 sed -i -e 's/http:\/\///g' $file
+cp README "$output_dir"
 mv "$file" "$output_dir/index.html"
 
 # echo "verbose: $v, force: $f, debug: $d, in: $1, out: $outFile"
