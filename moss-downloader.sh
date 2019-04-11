@@ -44,6 +44,8 @@ Moss Downloader: moss_downloader [-hq] [-d output-dir] [-n number] [-u url]
 		-h, --help display this help and exit
 
 	Usage Example: 
+	./moss-downloader.sh -u <moss-url> -n "5" -o <output directory name>
+
 '''
 }
 # read getopt’s output this way to handle the quoting right:

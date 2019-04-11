@@ -5,6 +5,6 @@
 # set -u
 # set -o pipefail
 
-./moss_downloader.sh -u "http://moss.stanford.edu/results/66335607/" -n "5" -o "Assignment_4"
-./moss_downloader.sh -u "http://moss.stanford.edu/results/566792455/" -n "5" -o "Assignment_3"
-./moss_downloader.sh -u "http://moss.stanford.edu/results/748129833/" -n "5" -o "Assignment_2"
+./moss-downloader.sh -u "http://moss.stanford.edu/results/<number>/" -n "5" -o "moss_result_dir_1"
+./moss-downloader.sh -u "http://moss.stanford.edu/results/<number>/" -n "10" -o "moss_result_dir_2"
+./moss-downloader.sh -u "http://moss.stanford.edu/results/<number>/" -n "20" -o "moss_result_dir_3"
